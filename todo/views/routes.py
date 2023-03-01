@@ -20,8 +20,7 @@ def health():
 
 @api.route('/todos', methods=['GET'])
 def get_todos():
-    """Return the list of todo items"""
-    return jsonify([TEST_ITEM])
+    args = request.args
 
 @api.route('/todos/<int:todo_id>', methods=['GET'])
 def get_todo(todo_id):
